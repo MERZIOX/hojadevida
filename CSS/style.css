@@ -1,55 +1,46 @@
-#contenedor{
-    margin-top: 2%;
-    border: 2px solid rgba(245, 137, 13, 0.979);
-    width: 50%;
-    border-color: rgb(17, 24, 82);
-    background-color: rgb(17, 24, 82);
-}
-
-.cabecera{
-    background-color: black;
-}
-
-.nav-link{
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
 
 }
-.separador{
-    font-size: xx-large;
-    color: white;
+
+.container{ 
+    background-color: royalblue;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    justify-content: space-around;
+    max-width: 1000px;
+}
+
+h1{
+    margin-bottom: 100px;
+    color: seashell;
+}
+
+.img-class{
+    width: 400px;
+    height: 300px;
+    margin-bottom: 5%;
+    object-fit: cover;
+    animation: nombre 1.5s infinite alternate;
+    filter: brightness(70%);
+}
+
+.img-class:hover{
+    filter: brightness(100%);
+}
+
+
+
+@keyframes nombre{
+    to{
+        transform: scale(1);
+    }
+    from{
+        transform: scale(1.10);
+    }
     
-}
-.head{
-    background-color: red;
-    height: 600px;
-}
-
-
-#menu::after{
-    position: absolute; 
-    transform: translate3d(0px, 42px, 0px); 
-    top: 0px; left: 0px; 
-    will-change: transform;    
-}
-
-.a-actual{
-    background-color: blue;
-    border-radius: 15%;
-    border: blue solid 1px;
-}
-
-.a-menu{
-    color: blue;
-}
-.text-1{
-    color: cornsilk;
-}
-nav{
-    background-color: black;
-}
-
-.formulario{
-    background-color: rgb(17, 24, 82);
-}
-body{
-    background-color: rgba(245, 137, 13, 0.979);
 }

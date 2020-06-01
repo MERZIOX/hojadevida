@@ -2,6 +2,7 @@
     margin-top: 2%;
     border: 2px rgba(245, 137, 13, 0.979);
     width: 90%;
+    height: auto;
 }
 
 .cabecera{
@@ -16,6 +17,19 @@
     color: white;
     
 }
+.limite-form{
+width: 400px;
+}
+.ml-auto,
+.mx-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto,
+.mx-auto {
+  margin-right: auto !important;
+}
+
 .head{
     background-color: red;
     height: 600px;
@@ -39,21 +53,25 @@
     margin-right: 5%;
 
 }
-.li{
-
-}
 
 .a-menu{
     color: blue;
 }
 .text-1{
     color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
+a{
 
+    text-decoration: none;
+    font-size:medium ;
+}
 .text-2{
     color: black;
 }
 nav{
+    margin-top: 2%;
     background-color: black;
 }
 
@@ -63,38 +81,3 @@ nav{
 body{
     background-color: rgba(245, 137, 13, 0.979);
 }
-
-/* portafolio estilos*/
-
-
-.galeria {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.galeria__item {
-    width: 80%;
-
-
-}
-@media (min-width: 480px){
-    .galeria__item {
-        width: 48%;
-        margin: 10px;
-    }
-}
-
-@media (min-width: 768px){
-    .galeria__item {
-        width: 33%;
-    }
-}
-
-@media (min-width: 1024px){
-    .galeria__item {
-        width: 20%;
-    }
-}
-

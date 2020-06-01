@@ -1,45 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="CSS/style-index.css">
-    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="css/styl.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/style-portafolio.css">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portafolio</title>
 </head>
 
 <body>
+<div id="" class="container-fluid">
 
-  <header>
-    <nav class="row">
-        <div class="col-lg-3">
-          <h1 style="color: aliceblue;">MARIO</h1>
+
+<nav class="row">
+    
+    <div >
+        <ul class="nav nav-pills justify-content-end" style="margin-right: 1%;">
+          <li class="nav-item">
+            <a class="nav-link text-1 " href="index.html">Inicio</a>
+          </li>
+          <li class="separador"> | </li>
+          <li class="nav-item">
+            <a class="nav-link text-1" href="index.html">Acerca de mí</a>
+          </li>
+          <li class="separador"> | </li>
+          <li class="nav-item">
+            <a class="nav-link text-1" href="index.html">Servicios</a>
+          </li>
+          <li class="separador"> | </li>
+          <li class="nav-item">
+            <a class="nav-link text-1 active" href="#portafolio">Portafolio</a>
+          </li>
+          <li class="separador"> | </li>
+          <li class="nav-item">
+            <a class="nav-link text-1 " href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+
+</nav>
+<a name="portafolio" id="portafolio"></a>
+<div class="mx-auto" style="width: 110px; margin-top: 10px; background-color: aliceblue;">
+<h2 >Portafolio</h2>
+</div>   
+<ul class="galeria">
+        <li class="galeria__item"><img src="img/imagen 1.png" class="galeria__img"></li>
+        <li class="galeria__item"><img src="img/imagen 2.png" class="galeria__img"></li>
+        <li class="galeria__item"><img src="img/imagen 3.png" class="galeria__img"></li>
+        <li class="galeria__item"><img src="img/imagen 4.png" class="galeria__img"></li>
+        <li class="galeria__item"><img src="img/imagen 5.png" class="galeria__img"></li>
+        <li class="galeria__item"><img src="img/imagen 6.png" class="galeria__img"></li>
+        <li class="galeria__item"><img src="img/imagen 7.png" class="galeria__img"></li>
+        <li class="galeria__item"><img src="img/imagen 8.png" class="galeria__img"></li>
+    </ul>
+    <a name="contacto" id="contacto"></a>
+    <div id="contenedor" class="container-fluid">
+<div style="height: 450px; width: 100%; background-color: lightcyan; border: black solid; " class="mx-auto" >
+<div class="mx-auto " style="margin-bottom: 2% ;width: 150px; ">
+    <h2 class=" d-flex justify-content-center " 
+    style="margin-top: 2%; color: rgb(33, 126, 207); font-family: Arial, Helvetica, sans-serif;"> Contactame</h2>
+</div>
+    <form class="justify-content-center mx-auto limite-form"  
+    method="POST" action="PHP/BD.php">
+        
+        <div class="form-group limite-form">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Luis" name="nombre">
         </div>
-        <div>
-          <ul class="nav nav-pills justify-content-end align-items-center ">
-            <li class="nav-item">
-              <a class="nav-link text-1 active" href="index.html">inicio</a>
-            </li>
-            <li class="separador"> | </li>
-            <li class="nav-item">
-              <a class="nav-link text-1" href="#">Acerca de mí</a>
-            </li>
-            <li class="separador"> | </li>
-            <li class="nav-item">
-              <a class="nav-link text-1" href="">Servicios</a>
-            </li>
-            <li class="separador"> | </li>
-            <li class="nav-item">
-              <a class="nav-link text-1" href="portafolio.html">Portafolio</a>
-            </li>
-            <li class="separador"> | </li>
-            <li class="nav-item">
-              <a class="nav-link text-1 " href="#">Contacto</a>
-            </li>
-          </ul>
+
+        <div class="form-group limite-form">
+          <label for="correo">Correo electronico</label>
+          <input type="email" class="form-control" id="correo" placeholder="name@example.com" name="correo">
         </div>
-      </nav>
-    </header>
-       
+        <div class="form-group  limite-form" >
+          <label for="servicio">Selecciona un servicio</label>
+          <select class="form-control" id="servicio" name="servicio">
+            <option selected value="0">selecciona</option>
+            <option value="mantenimiento tecnico">mantenimiento tecnico</option>
+            <option value="pagina web">pagina web</option>
+            <option value="base de datos">base de datos</option>
+          </select>
+        </div>
+    
+        <div class="form-group limite-form">
+          <label for="observacion">Observaciones</label>
+          <textarea class="form-control" id="observacion" rows="3" name="observacion"></textarea>
+        </div>
+        <button id="btn-envio" class="btn btn-success">Enviar</button>
+      </form>
+
+</div>
+    </div>
+
+
+</div>
+
+<script src="js/modal.js"></script>
+
+<script>
+  $(document).ready(function () {
+      $('#btn-envio').click(function () {
+
+          form = $('#formulario');
+
+          if (form != "") {
+              form.submit();
+          } else {
+              alert("Llene los campos obligatorios, por favor");
+
+          }
+
+
+      })
+  });
+</script>
 </body>
 </html>

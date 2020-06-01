@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+#contenedor{
+    border: 1px hidden;
+    margin: auto;
+    width: 90%;
+    height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+
+header{
+    background-color:orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+
+}
+
+
+.a1{
+    text-decoration-line: none;
+    color: black;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.a1:hover{
+    background-color: rgba(230, 223, 223, 0.425);
+}
+
+#actual{
+    background-color: rgb(229, 255, 0);
+    border-radius: 10px 10px 10px 10px;
+}
+
+#actual:hover{
+    background-color: rgba(230, 223, 223, 0.425);
+
+}
+/* estilos de bootstrap*/
